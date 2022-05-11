@@ -1,0 +1,69 @@
+---
+layout: post
+title: Prototype of the Rumorino
+date: 2021-12-20
+author: Diana Tosca
+comments: true
+---
+
+<h2>Breadboarding</h2>
+
+<p>First, I put all the components on a breadboard.</p>
+
+<img src="https://dtosca.github.io/ixd/assets/final/breadboard.jpg" width="700" height="525"/>
+
+<br><br>
+
+<p>For adjusting pitch, volume, and speed, I used three 10k potentiometers.</p>
+
+<p>While I initially had a dial to control which samples where being played, I changed it to having several buttons that each correspond to a category to make it easier to switch between categories.</p>
+
+<p>I also have two push buttons to move through samples, and one push button to toggle whether the sound loops.</p>
+
+<h2>The Code</h2>
+
+<p>There are two components to the code.</p>
+
+<p>The <a href="https://github.com/dtosca/rumorino/blob/main/sketch_nov28a/sketch_nov28a.ino">Arduino</a> code gets the values from the components and sends it through the serial ports.</p>
+
+<p>The <a href="https://github.com/dtosca/rumorino/blob/main/rumorino.maxpat">Max MSP</a> code gets the values through the serial ports and manipulates the parameters of the sample being played with [~sfplay].</p>
+
+<p>All the commented code, including the sound samples, can be found on <a href="https://github.com/dtosca/rumorino">my Github.</a></p>
+
+<h2>Choosing noises</h2>
+
+<p>I decided to use prerecorded samples for the noises, rather than synthesizing my own noises. I thought the noises would sound more "natural" this way.</p>
+
+<p>I used samples from <a href="https://freesound.org/">FreeSound.org</a> for the first category of noises, I plan to do the same for the rest of the categories</p>
+
+<h2>The Box</h2>
+
+<p>I designed the box using <a href="https://en.makercase.com/#/>">Makercase</a> and added icons to <a href="https://github.com/dtosca/rumorino/blob/main/box_rumorino.ai">the file</a> using Adobe illustrator.</p>
+
+<p>I chose the icons to make them as universal as possible (without being language specific), but I'll definitely need to do some user testing to see if these icons make sense. I also like the idea of this instrument being exploratory, so not all the control's functions need to be immediately apparent.</p>
+
+<p>Then I lasercut the design on cardboard using the Epilog Mini lasercutters.</p>
+
+<p>The box came out pretty good:</p>
+
+<img src="https://dtosca.github.io/ixd/assets/final/box_1.jpg" heigh="700" width="525"/>
+
+<br><br>
+
+<img src="https://dtosca.github.io/ixd/assets/final/breadboard_box.jpg" height="700" width="525"/>
+
+<h2>Next steps...</h2>
+
+<p>Some of the code is incomplete, I still have to incorporate the volume, pitch, and speed dials into the MaxMSP code.</p>
+
+<p>I also don't have all the samples chosen for all the noise categories.</p>
+
+<p>Originally, I made the decision to have the boxes all be capable of playing every sample. I'm still debating this - it might be nice to have one "instrument" per noise category, true to the original intonarumori. On the other hand, having these instruments be dynamic could add versatility to the possible noise combinations that could be produced. I'll keep thinking about this.</p>
+
+<p>I started soldering the components together, moving them off the breadboard, but then NYU told us to avoid going to campus, so I'll leave the soldering for when COVID isn't spiking.</p>
+
+<img src="https://dtosca.github.io/ixd/assets/final/soldering.jpg" height="700" width="525"/>
+
+<p>To be continued!</p>
+
+<hr>
