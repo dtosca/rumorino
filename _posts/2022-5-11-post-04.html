@@ -6,7 +6,7 @@ author: Diana Tosca
 comments: true
 ---
 
-<h1>The Plan</h1>
+<h2>The Plan</h2>
 
 <p>For this new iteration of the Rumorino, I want to be able to record sound, manipulate the sound with MaxMsp through the rumorino, and play it back.</p>
 
@@ -19,13 +19,17 @@ comments: true
   <li>Make it all bluetooth!</li>
 </ol>
 
-<h1>Audio Interface Sketches and Mockup</h1>
+<h2>Audio Interface Sketches and Mockup</h2>
 
 <p>Here are some preliminary sketches of the rumorino interface:</p>
 
-<h1>Arduino Things</h1>
+<img src="https://dtosca.github.io/ixd/assets/final2/PXL_20220511_193342873.jpg"  width="400" height="400"/>
 
-<h2>Build of Materials</h2>
+<img src="https://dtosca.github.io/ixd/assets/final2/PXL_20220511_193342873~2.jpg"  width="400" height="400"/>
+
+<h2>Arduino Things</h2>
+
+<h3>Build of Materials</h3>
 
 <table style="width: 300px; height: 300px;">
 	<tbody>
@@ -58,29 +62,53 @@ comments: true
 		</tr>
 		<tr style="height: 23px;">
 			<td style="width: 88.7708px; height: 23px;"><a href="https://www.microcenter.com/product/618901/inland-400-tie-point-breadboard"><p>Breadboard</p></a></td>
-			<td style="width: 114.229px; height: 23px;">@2.99</td>
+			<td style="width: 114.229px; height: 23px;">$2.99</td>
+            <td style="width: 114.229px; height: 23px;">x1</td>
+		</tr>
+        <tr style="height: 23px;">
+			<td style="width: 88.7708px; height: 23px;"><a href="https://www.microcenter.com/product/481629/duracell-coppertop-9v-alkaline-battery"><p>9V Battery</p></a></td>
+			<td style="width: 114.229px; height: 23px;">$5.99</td>
+            <td style="width: 114.229px; height: 23px;">x1</td>
+		</tr>
+        <tr style="height: 23px;">
+			<td style="width: 88.7708px; height: 23px;"><a href="https://www.microcenter.com/product/448923/mcm-electronics-9-volt-battery-snap-connector"><p>9V Battery Snap</p></a></td>
+			<td style="width: 114.229px; height: 23px;">$1.99</td>
             <td style="width: 114.229px; height: 23px;">x1</td>
 		</tr>
         <tr style="height: 23px;">
 			<td style="width: 88.7708px; height: 23px;">Total</td>
-			<td style="width: 114.229px; height: 23px;">&nbsp;</td>
-            <td style="width: 114.229px; height: 23px;">&nbsp;</td>
-		</tr>
-        <tr style="height: 23px;">
-			<td style="width: 88.7708px; height: 23px;">Total</td>
-			<td style="width: 114.229px; height: 23px;">&nbsp;</td>
+			<td style="width: 114.229px; height: 23px;">$60.91</td>
             <td style="width: 114.229px; height: 23px;">&nbsp;</td>
 		</tr>
 	</tbody>
 </table>
 
-<h2>Bluetooth</h2>
+<h3>Bluetooth</h3>
 <p>The first crucial step was getting bluetooth to work with Arduino and connecting to MaxMSP.</p>
+<p>The idea is that the bluetooth connection would replace the wired connection.</p>
+<p>I followed the <a href="https://create.arduino.cc/projecthub/millerman4487/view-serial-monitor-over-bluetooth-fbb0e5">tutorial here</a> to connect the Arduino to Bluetooth. After writing the code and powering on the Arduino, I tried to connect it my computer. The HC-05 said it needed a pin - according to <a href="https://create.arduino.cc/projecthub/akshayjoseph666/change-the-name-and-password-of-hc-05-bluetooth-module-826db5">this tutorial</a>, the default pin is 1234.</p>
 
-<h1>The Max Patch</h1>
+<p>And success! It connected to my computer.</p>
 
-<h1>Demo</h1>
+<img src="https://dtosca.github.io/ixd/assets/final2/connected.png"  width="487" height="189"/>
 
-<h1>Next Steps</h1>
+<p>I used a test Arduino code that generated a random number when a button is pressed to test the bluetooth capabilities.</p>
+
+<p>However, I kept getting an error that told me the Arduino didn't want to connect to the Bluetooth module.</p>
+
+<p>At this point, I decided to regroup and just try to get a basic connection and try <a href="https://create.arduino.cc/projecthub/electropeak/getting-started-with-hc-05-bluetooth-module-arduino-e0ca81">this tutorial on Arduino and Bluetooth</a></p>.
+
+<p>It kind of worked! But still very buggy.</p>
+
+<img src="https://dtosca.github.io/ixd/assets/final2/PXL_20220511_213247206.jpg"  width="400" height="400"/>
+
+<img src="https://dtosca.github.io/ixd/assets/final2/PXL_20220511_213359901.MP.jpg"  width="400" height="400"/>
+
+<p>Max Patch Code: <a href="https://github.com/dtosca/rumorino-code"></a>https://github.com/dtosca/rumorino-code</p>
+
+
+<h2>Next Steps</h2>
 
 <p>For the next steps, I'd like to back able to record using the Arduino and play the noise back through it as well. I'm not sure how to get the MaxMSP data back into the Arduino, so I'll look into that!</p>
+
+<img src="https://dtosca.github.io/ixd/assets/final2/PXL_20220511_225348902.jpg"  width="400" height="400"/>
